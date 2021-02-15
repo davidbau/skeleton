@@ -1,0 +1,29 @@
+name: pbenv
+channels:
+  - pytorch
+  - ostrokach-forge
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cudatoolkit=10.2
+  - pytorch=1.7.1
+  - torchvision=0.8.2
+  - mkl-include
+  - numpy
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - matplotlib
+  - seaborn
+  - numba
+  - opencv
+  - jupyter
+  - ftfy
+  - regex
+  - nodejs
+  - pyyaml
+  - mkl
+  - tqdm
+  - pip
+  - pip:
+     - torchray
