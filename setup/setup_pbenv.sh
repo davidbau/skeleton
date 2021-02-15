@@ -45,6 +45,7 @@ conda env create -f setup/${RECIPE}.yml
 
 # Set up CUDA_HOME to set itself up correctly on every source activate
 # https://stackoverflow.com/questions/31598963
-mkdir -p ~/.conda/envs/${RECIPE}/etc/conda/activate.d
+RECIPE_HOME=$(conda info --envs | grep ${RECIPE} | awk 'END{print $NF}')
+mkdir -p ${RECIPE_HOME}/etc/conda/activate.d
 echo "export CUDA_HOME=/usr/local/cuda-10.2" \
-    > ~/.conda/envs/${RECIPE}/etc/conda/activate.d/CUDA_HOME.sh
+    > ${RECIPE_HOME}/etc/conda/activate.d/CUDA_HOME.sh
